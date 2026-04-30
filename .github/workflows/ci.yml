@@ -6,6 +6,7 @@ on:
 
 env:
   IMAGE_NAME: tqnhu4/auth-service
+  GITOPS_REPO: https://github.com/tqnhu4/gitops-platform.git
 
 jobs:
   build:
@@ -27,7 +28,7 @@ jobs:
     # 🔥 UPDATE GITOPS REPO
     - name: Update GitOps repo
       run: |
-        git clone https://github.com/tqnhu4/argocd-auth-service.git
+        git clone $GITOPS_REPO
         cd gitops-platform
 
         sudo snap install yq
