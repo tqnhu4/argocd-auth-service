@@ -26,10 +26,12 @@ jobs:
     - name: Push Image
       run: docker push $IMAGE_NAME:${{ github.sha }}
 
+
+
     # 🔥 UPDATE GITOPS REPO
     - name: Update GitOps repo
       run: |
-        git clone $GITOPS_REPO
+        git clone https://x-access-token:${{ secrets.GITOPS_TOKEN }}@github.com/tqnhu4/gitops-platform.git
         cd gitops-platform
 
         sudo snap install yq
