@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 env:
-  IMAGE_NAME: tqnhu4/auth-service
+  IMAGE_NAME: tqnhu/auth-service
   GITOPS_REPO: https://github.com/tqnhu4/gitops-platform.git
 
 jobs:
