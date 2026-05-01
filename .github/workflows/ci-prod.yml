@@ -1,4 +1,4 @@
-name: Build & Push Auth Service
+name: Build & Push Auth Service on Prod
 
 on:
   push:
